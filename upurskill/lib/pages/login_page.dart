@@ -15,7 +15,11 @@ class LoginPage extends StatelessWidget {
           title(),
           emailInput(),
           passwordInput(),
-          loginButton(),
+          GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/home');
+              },
+              child: loginButton()),
           SizedBox(
             height: 10,
           ),
