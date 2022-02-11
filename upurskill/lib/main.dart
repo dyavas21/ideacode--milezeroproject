@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:upurskill/pages/explore_page.dart';
 import 'package:upurskill/pages/home_page.dart';
 import 'package:upurskill/pages/login_page.dart';
 import 'package:upurskill/pages/register_page.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginPage(),
         '/register': (context) => RegisterPage(),
         '/home': (context) => HomePage(),
+        '/explore': (context) => ExplorePage(),
       },
     );
   }

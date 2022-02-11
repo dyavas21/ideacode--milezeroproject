@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:upurskill/theme.dart';
+import 'package:upurskill/widgets/homepage_card.dart';
+import 'package:upurskill/widgets/homepage_card2.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -19,6 +21,43 @@ class HomePage extends StatelessWidget {
             height: 26,
           ),
           title2(),
+          SizedBox(
+            height: 30,
+          ),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color(0xffF8F8F8),
+        showSelectedLabels: true,
+        selectedItemColor: blackColor,
+        unselectedItemColor: blackColor,
+        showUnselectedLabels: true,
+        onTap: (value) {
+          if (value == 1) {
+            Navigator.pushNamed(context, '/explore');
+          }
+        },
+        items: [
+          BottomNavigationBarItem(
+            label: 'Home',
+            icon: Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(
+            label: 'Explore',
+            icon: Icon(Icons.explore),
+          ),
+          BottomNavigationBarItem(
+            label: 'Feeds',
+            icon: Icon(
+              Icons.feed,
+            ),
+          ),
+          BottomNavigationBarItem(
+            label: 'My Course',
+            icon: Icon(
+              Icons.play_lesson,
+            ),
+          ),
         ],
       ),
     );
@@ -73,7 +112,7 @@ class HomePage extends StatelessWidget {
             bottom: 13,
             left: 20,
           ),
-          width: double.maxFinite,
+          width: double.infinity,
           height: 77,
           decoration: BoxDecoration(
             color: whiteGreyColor2,
@@ -122,29 +161,31 @@ class HomePage extends StatelessWidget {
             fontSize: 16,
           ),
         ),
-        Row(
+        Column(
           children: [
-            Container(
-              padding: EdgeInsets.all(14),
-              margin: EdgeInsets.only(top: 12),
-              height: 120,
-              width: 154,
-              decoration: BoxDecoration(
-                color: whiteGreyColor2,
-                borderRadius: BorderRadius.circular(4),
-              ),
-              child: Align(
-                alignment: Alignment.bottomRight,
-                child: Text(
-                  'Try Now',
-                  style: GoogleFonts.raleway(
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                HomePageCard2(),
+                HomePageCard(),
+              ],
             ),
-            SizedBox(
-              width: 19,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                HomePageCard2(),
+                HomePageCard(),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                HomePageCard2(),
+                HomePageCard(),
+              ],
             ),
           ],
         ),
