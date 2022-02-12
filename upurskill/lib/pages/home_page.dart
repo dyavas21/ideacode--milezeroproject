@@ -10,9 +10,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: ListView(
         padding: EdgeInsets.only(
-          left: 41,
+          left: 38,
           top: 59,
-          right: 43,
+          right: 38,
         ),
         children: [
           title(),
@@ -175,8 +175,8 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                HomePageCard2(),
                 HomePageCard(),
+                HomePageCard2(),
               ],
             ),
             Row(

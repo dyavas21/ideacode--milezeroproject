@@ -27,6 +27,11 @@ class ExplorePage extends StatelessWidget {
         selectedItemColor: blackColor,
         unselectedItemColor: blackColor,
         showUnselectedLabels: true,
+        onTap: (value) {
+          if (value == 0) {
+            Navigator.pushNamed(context, '/home');
+          }
+        },
         items: [
           BottomNavigationBarItem(
             label: 'Home',
