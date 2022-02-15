@@ -6,6 +6,7 @@ import 'package:upurskill/pages/login_page.dart';
 import 'package:upurskill/pages/public_speaking_page.dart';
 import 'package:upurskill/pages/register_page.dart';
 import 'package:upurskill/pages/splash_page.dart';
+import 'package:upurskill/widgets/navbar.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/explore': (context) => ExplorePage(),
         '/public-speaking': (context) => PublicSpeakingPage(),
         '/course-detail': (context) => CourseDetailPage(),
+        '/side': (context) => Navbar(),
       },
     );
   }

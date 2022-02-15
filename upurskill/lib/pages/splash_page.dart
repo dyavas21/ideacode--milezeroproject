@@ -20,22 +20,37 @@ class _SplashPageState extends State<SplashPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(
-          left: 50,
-          top: 50,
+        body: Stack(
+      children: [
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Image.asset(
+            'assets/splash_screen.png',
+          ),
         ),
-        child: Center(
-          child: Text(
-            'Up Ur Skill',
-            style: GoogleFonts.raleway(
-              fontSize: 27,
-              fontWeight: FontWeight.w700,
-              color: Color(0xff000000),
+        Align(
+          alignment: Alignment.topCenter,
+          child: Image.asset(
+            'assets/splash_screen2.png',
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 39,
+            top: 32,
+          ),
+          child: Center(
+            child: Text(
+              'Up Ur Skill',
+              style: GoogleFonts.raleway(
+                fontSize: 27,
+                fontWeight: FontWeight.w700,
+                color: Color(0xff3A3845),
+              ),
             ),
           ),
         ),
-      ),
-    );
+      ],
+    ));
   }
 }

@@ -7,111 +7,119 @@ class PublicSpeakingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
+      body: ListView(
         children: [
           Container(
-            padding: EdgeInsets.only(
-              top: 50,
-              left: 42,
-            ),
-            height: 267,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20),
+              height: 267,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
+                color: Color(0xffF2EFFF),
               ),
-              color: Color(0xffF2EFFF),
-            ),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/explore');
-                },
-                child: Image.asset(
-                  'assets/back-btn.png',
-                  width: 24,
-                ),
-              ),
-            ),
-          ),
-          Header2(),
-          Spacer(),
-          Container(
-            height: 117,
-            width: double.infinity,
-            padding: EdgeInsets.only(
-              left: 38,
-              right: 36,
-              top: 13,
-              bottom: 27,
-            ),
-            decoration: BoxDecoration(color: Colors.white, boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.2),
-                spreadRadius: 2,
-                blurRadius: 7,
-                offset: Offset(0, 3),
-              )
-            ]),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      'In Progress',
-                      style: GoogleFonts.raleway(
-                        fontSize: 12,
-                        color: Color(0xff3A3845),
+              child: Stack(
+                children: [
+                  Image.asset(
+                    'assets/course_detail.png',
+                    height: 267,
+                    width: MediaQuery.of(context).size.width,
+                    fit: BoxFit.cover,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 42,
+                        top: 70,
                       ),
-                    ),
-                    Spacer(),
-                    Text(
-                      '30/60',
-                      style: GoogleFonts.raleway(
-                        fontSize: 12,
-                        color: Color(0xff3A3845),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 6,
-                ),
-                Image.asset(
-                  'assets/sylabus_progress.png',
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/course-detail');
-                  },
-                  child: Container(
-                    width: double.infinity,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4),
-                      color: Color(0xff242328),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Continue',
-                        style: GoogleFonts.raleway(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                        ),
+                      child: Image.asset(
+                        'assets/back-btn.png',
+                        width: 24,
                       ),
                     ),
                   ),
-                )
-              ],
-            ),
-          ),
+                ],
+              )),
+          Header2(),
         ],
       ),
+      floatingActionButton: Container(
+        height: 117,
+        width: double.infinity,
+        padding: EdgeInsets.only(
+          left: 38,
+          right: 36,
+          top: 13,
+          bottom: 27,
+        ),
+        decoration: BoxDecoration(color: Colors.white, boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2),
+            spreadRadius: 2,
+            blurRadius: 7,
+            offset: Offset(0, 3),
+          )
+        ]),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Text(
+                  'In Progress',
+                  style: GoogleFonts.raleway(
+                    fontSize: 12,
+                    color: Color(0xff3A3845),
+                  ),
+                ),
+                Spacer(),
+                Text(
+                  '30/60',
+                  style: GoogleFonts.raleway(
+                    fontSize: 12,
+                    color: Color(0xff3A3845),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 6,
+            ),
+            Image.asset(
+              'assets/sylabus_progress.png',
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/course-detail');
+              },
+              child: Container(
+                width: double.infinity,
+                height: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  color: Color(0xff242328),
+                ),
+                child: Center(
+                  child: Text(
+                    'Continue',
+                    style: GoogleFonts.raleway(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 

@@ -21,7 +21,7 @@ class LoginPage extends StatelessWidget {
               },
               child: loginButton()),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           Center(
             child: Text(
@@ -34,22 +34,33 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 24,
-          ),
-          Center(
-            child: Text(
-              'or',
-              style: GoogleFonts.raleway(
-                color: blackColor,
-                fontSize: 18,
-              ),
-            ),
+            height: 122,
           ),
           GestureDetector(
             onTap: () {
               Navigator.pushNamed(context, '/register');
             },
-            child: createButton(),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Don’t have an account?',
+                  style: GoogleFonts.raleway(
+                    color: Color(0xff3A3845),
+                  ),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  'Register',
+                  style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    color: Color(0xff3A3845),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -74,7 +85,7 @@ class LoginPage extends StatelessWidget {
             height: 10,
           ),
           Text(
-            'Login',
+            'Hi, let’s upgrade your\nskills here!',
             style: GoogleFonts.raleway(
               fontSize: 32,
               color: Color(0xff000000),
@@ -87,7 +98,7 @@ class LoginPage extends StatelessWidget {
 
   Widget emailInput() {
     return Container(
-      margin: EdgeInsets.only(top: 51),
+      margin: EdgeInsets.only(top: 38),
       height: 52,
       width: double.infinity,
       padding: EdgeInsets.all(16),
@@ -97,11 +108,12 @@ class LoginPage extends StatelessWidget {
       ),
       child: TextFormField(
         decoration: InputDecoration.collapsed(
-            hintText: 'username or email',
-            hintStyle: GoogleFonts.raleway(
-              fontSize: 18,
-              color: Color(0xff808080),
-            )),
+          hintText: 'username or email',
+          hintStyle: GoogleFonts.raleway(
+            fontSize: 18,
+            color: Color(0xff808080),
+          ),
+        ),
       ),
     );
   }
@@ -139,7 +151,7 @@ class LoginPage extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
-        color: Color(0xff000000),
+        color: Color(0xff3A3845),
       ),
       child: Center(
         child: Text(
@@ -154,28 +166,22 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Widget createButton() {
-    return Container(
-      margin: EdgeInsets.only(top: 25),
-      height: 52,
-      width: double.infinity,
-      padding: EdgeInsets.only(
-        top: 15,
-        bottom: 16,
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(4),
-        color: darkGreyColor,
-      ),
-      child: Center(
-        child: Text(
-          'create a new account',
-          style: GoogleFonts.raleway(
-            fontSize: 18,
-            color: blackColor,
+  Widget Gambar() {
+    return Stack(
+      children: [
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Image.asset(
+            'assets/splash_screen.png',
           ),
         ),
-      ),
+        Align(
+          alignment: Alignment.topCenter,
+          child: Image.asset(
+            'assets/splash_screen2.png',
+          ),
+        ),
+      ],
     );
   }
 }
