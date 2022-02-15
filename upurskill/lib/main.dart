@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:upurskill/pages/course_detail_page.dart';
 import 'package:upurskill/pages/explore_page.dart';
 import 'package:upurskill/pages/home_page.dart';
 import 'package:upurskill/pages/login_page.dart';
+import 'package:upurskill/pages/public_speaking_page.dart';
 import 'package:upurskill/pages/register_page.dart';
 import 'package:upurskill/pages/splash_page.dart';
 
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
         '/register': (context) => RegisterPage(),
         '/home': (context) => HomePage(),
         '/explore': (context) => ExplorePage(),
+        '/public-speaking': (context) => PublicSpeakingPage(),
+        '/course-detail': (context) => CourseDetailPage(),
       },
     );
   }

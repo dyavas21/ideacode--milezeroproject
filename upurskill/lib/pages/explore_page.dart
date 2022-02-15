@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:upurskill/pages/public_speaking_page.dart';
 import 'package:upurskill/theme.dart';
 import 'package:upurskill/widgets/exploreleft_card.dart';
 import 'package:upurskill/widgets/explorepage_card.dart';
@@ -18,7 +19,11 @@ class ExplorePage extends StatelessWidget {
           SizedBox(
             height: 29,
           ),
-          title2(),
+          GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/public-speaking');
+              },
+              child: title2()),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
