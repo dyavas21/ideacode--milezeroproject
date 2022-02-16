@@ -97,24 +97,28 @@ class QuizStartPage extends StatelessWidget {
             ),
             QuizContainer(
               isPurple: true,
+              question: 'Kontak mata pada 1 arah saja.',
             ),
             SizedBox(
               height: 10,
             ),
             QuizContainer(
               isPurple: false,
+              question: 'Terus melakukan kontak mata.',
             ),
             SizedBox(
               height: 10,
             ),
             QuizContainer(
               isPurple: false,
+              question: 'Kontak mata secara bergantian.',
             ),
             SizedBox(
               height: 10,
             ),
             QuizContainer(
               isPurple: false,
+              question: 'Tidak melakukan kontak mata.',
             ),
           ],
         ),

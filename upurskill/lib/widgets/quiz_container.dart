@@ -3,9 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class QuizContainer extends StatelessWidget {
   bool? isPurple;
+  String? question;
 
   QuizContainer({
     this.isPurple,
+    this.question,
   });
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class QuizContainer extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  'How to do the quiz?',
+                  question!,
                   style: GoogleFonts.raleway(
                     color: Color(0xff2C2C2C),
                   ),
@@ -83,7 +85,7 @@ class QuizContainer extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  'How to do the quiz?',
+                  question!,
                   style: GoogleFonts.raleway(
                     color: Color(0xff2C2C2C),
                   ),

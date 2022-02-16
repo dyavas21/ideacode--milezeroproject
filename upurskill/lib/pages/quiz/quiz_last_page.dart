@@ -97,24 +97,28 @@ class QuizLastPage extends StatelessWidget {
             ),
             QuizContainer(
               isPurple: true,
+              question: 'Menghafal seluruh naskah',
             ),
             SizedBox(
               height: 10,
             ),
             QuizContainer(
               isPurple: false,
+              question: 'Memahami poin naskah',
             ),
             SizedBox(
               height: 10,
             ),
             QuizContainer(
               isPurple: false,
+              question: 'Melakukan persiapan panjang',
             ),
             SizedBox(
               height: 10,
             ),
             QuizContainer(
               isPurple: false,
+              question: 'Percaya diri',
             ),
           ],
         ),

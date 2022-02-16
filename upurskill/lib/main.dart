@@ -4,6 +4,7 @@ import 'package:upurskill/pages/course_detail_page.dart';
 import 'package:upurskill/pages/course_side_menu.dart';
 import 'package:upurskill/pages/main/course_page.dart';
 import 'package:upurskill/pages/main/explore_page.dart';
+import 'package:upurskill/pages/main/feed_chat_page.dart';
 import 'package:upurskill/pages/main/feed_page.dart';
 import 'package:upurskill/pages/main/home_page.dart';
 import 'package:upurskill/pages/login_page.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/feed': (context) => FeedPage(),
         '/course': (context) => CoursePage(),
         '/course-last': (context) => CourseDetailLastPage(),
+        '/feed-chat': (context) => FeedChatPage(),
       },
     );
   }

@@ -63,67 +63,100 @@ class FeedPage extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: Container(
-        height: 104,
-        width: double.infinity,
-        padding: EdgeInsets.only(
-          left: 52,
-          right: 51,
-          top: 25,
-          bottom: 26,
-        ),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              spreadRadius: 2,
-              blurRadius: 7,
-              offset: Offset(0, 3),
-            )
-          ],
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/home');
-              },
-              child: BottomNavigationStyle(
-                imageUrl: 'assets/home.png',
-                title: 'Home',
-                isActive: false,
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(
+              right: 40,
+              bottom: 40,
+            ),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: FloatingActionButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/feed-chat');
+                },
+                child: Container(
+                  width: 52,
+                  height: 52,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xff7B61FF),
+                  ),
+                  child: Center(
+                    child: Image.asset(
+                      'assets/plus.png',
+                      width: 20,
+                    ),
+                  ),
+                ),
               ),
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/explore');
-              },
-              child: BottomNavigationStyle(
-                imageUrl: 'assets/explore.png',
-                title: 'Explore',
-                isActive: false,
-              ),
+          ),
+          Container(
+            height: 104,
+            width: double.infinity,
+            padding: EdgeInsets.only(
+              left: 52,
+              right: 51,
+              top: 25,
+              bottom: 26,
             ),
-            BottomNavigationStyle(
-              imageUrl: 'assets/feeds_color.png',
-              title: 'Feeds',
-              isActive: true,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  spreadRadius: 2,
+                  blurRadius: 7,
+                  offset: Offset(0, 3),
+                )
+              ],
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/course');
-              },
-              child: BottomNavigationStyle(
-                imageUrl: 'assets/course.png',
-                title: 'My Course',
-                isActive: false,
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/home');
+                  },
+                  child: BottomNavigationStyle(
+                    imageUrl: 'assets/home.png',
+                    title: 'Home',
+                    isActive: false,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/explore');
+                  },
+                  child: BottomNavigationStyle(
+                    imageUrl: 'assets/explore.png',
+                    title: 'Explore',
+                    isActive: false,
+                  ),
+                ),
+                BottomNavigationStyle(
+                  imageUrl: 'assets/feeds_color.png',
+                  title: 'Feeds',
+                  isActive: true,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/course');
+                  },
+                  child: BottomNavigationStyle(
+                    imageUrl: 'assets/course.png',
+                    title: 'My Course',
+                    isActive: false,
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
