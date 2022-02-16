@@ -7,11 +7,13 @@ class ExplorePageCard extends StatelessWidget {
   String? title;
   String? enrolled;
   String? progress;
+  String? imageUrl;
 
   ExplorePageCard({
     this.enrolled,
     this.title,
     this.progress,
+    this.imageUrl,
   });
 
   @override
@@ -22,14 +24,15 @@ class ExplorePageCard extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
-            color: whiteGreyColor2,
+            color: Colors.white,
           ),
           width: (MediaQuery.of(context).size.width - 106) / 2,
           height: 120,
           child: Stack(
             children: [
               Image.asset(
-                'assets/trending.png',
+                imageUrl!,
+                width: double.infinity,
                 fit: BoxFit.cover,
               ),
               Padding(

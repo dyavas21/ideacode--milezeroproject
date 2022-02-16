@@ -5,8 +5,10 @@ import 'package:upurskill/theme.dart';
 
 class HomePageCard2 extends StatelessWidget {
   String? imageUrl;
+  String? title;
   HomePageCard2({
     this.imageUrl,
+    this.title,
   });
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class HomePageCard2 extends StatelessWidget {
           height: 13,
         ),
         Text(
-          'See how other people \nthink about you!',
+          title!,
           style: GoogleFonts.raleway(),
         )
       ],

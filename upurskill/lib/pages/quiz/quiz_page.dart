@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../widgets/bottom_navigation_style.dart';
+import '../../widgets/bottom_navigation_style.dart';
 
 class QuizPage extends StatelessWidget {
   @override
@@ -212,13 +212,13 @@ class QuizPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: Container(
-        height: 104,
+        height: 94,
         width: double.infinity,
         padding: EdgeInsets.only(
-          left: 52,
-          right: 51,
-          top: 25,
-          bottom: 26,
+          left: 50,
+          right: 36,
+          top: 27,
+          bottom: 27,
         ),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -232,33 +232,41 @@ class QuizPage extends StatelessWidget {
           ],
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            BottomNavigationStyle(
-              imageUrl: 'assets/home_color.png',
-              title: 'Home',
-              isActive: true,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/side');
+              },
+              child: Image.asset(
+                'assets/side_bar.png',
+                width: 19,
+                height: 12,
+              ),
+            ),
+            SizedBox(
+              width: 22,
             ),
             GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/explore');
+                Navigator.pushNamed(context, '/quiz1');
               },
-              child: BottomNavigationStyle(
-                imageUrl: 'assets/explore.png',
-                title: 'Explore',
-                isActive: false,
+              child: Container(
+                width: 248,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: Color(0xff3A3845),
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Center(
+                  child: Text(
+                    'Let’s start the quiz!',
+                    style: GoogleFonts.raleway(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
               ),
-            ),
-            BottomNavigationStyle(
-              imageUrl: 'assets/feeds.png',
-              title: 'Feeds',
-              isActive: false,
-            ),
-            BottomNavigationStyle(
-              imageUrl: 'assets/course.png',
-              title: 'My Course',
-              isActive: false,
             ),
           ],
         ),

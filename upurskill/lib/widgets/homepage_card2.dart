@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:shimmer/shimmer.dart';
-import 'package:upurskill/pages/home_page.dart';
+import 'package:upurskill/pages/main/home_page.dart';
 import 'package:upurskill/theme.dart';
 
 class HomePageCard extends StatelessWidget {

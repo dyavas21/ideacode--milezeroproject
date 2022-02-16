@@ -52,10 +52,15 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            BottomNavigationStyle(
-              imageUrl: 'assets/home_color.png',
-              title: 'Home',
-              isActive: true,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/home');
+              },
+              child: BottomNavigationStyle(
+                imageUrl: 'assets/home_color.png',
+                title: 'Home',
+                isActive: true,
+              ),
             ),
             GestureDetector(
               onTap: () {
@@ -67,15 +72,25 @@ class HomePage extends StatelessWidget {
                 isActive: false,
               ),
             ),
-            BottomNavigationStyle(
-              imageUrl: 'assets/feeds.png',
-              title: 'Feeds',
-              isActive: false,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/feed');
+              },
+              child: BottomNavigationStyle(
+                imageUrl: 'assets/feeds.png',
+                title: 'Feeds',
+                isActive: false,
+              ),
             ),
-            BottomNavigationStyle(
-              imageUrl: 'assets/course.png',
-              title: 'My Course',
-              isActive: false,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/course');
+              },
+              child: BottomNavigationStyle(
+                imageUrl: 'assets/course.png',
+                title: 'My Course',
+                isActive: false,
+              ),
             ),
           ],
         ),
@@ -138,80 +153,79 @@ class HomePage extends StatelessWidget {
           height: 13,
         ),
         Container(
-            width: double.infinity,
-            height: 77,
-            decoration: BoxDecoration(
-              color: whiteGreyColor2,
-              borderRadius: BorderRadius.circular(
-                4,
-              ),
+          width: double.infinity,
+          height: 88,
+          decoration: BoxDecoration(
+            color: whiteGreyColor2,
+            borderRadius: BorderRadius.circular(
+              4,
             ),
-            child: Stack(
-              children: [
-                Image.asset(
-                  'assets/bg_course.png',
-                  width: double.infinity,
-                  height: 88,
-                  fit: BoxFit.cover,
+          ),
+          child: Stack(
+            children: [
+              Image.asset(
+                'assets/bg_course.png',
+                width: double.infinity,
+                height: 88,
+                fit: BoxFit.cover,
+              ),
+              Container(
+                padding: EdgeInsets.only(
+                  top: 13,
+                  left: 20,
+                  right: 23,
+                  bottom: 13,
                 ),
-                Container(
-                  padding: EdgeInsets.only(
-                    top: 13,
-                    left: 20,
-                    right: 23,
-                    bottom: 13,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Public Speaking Class',
-                        style: GoogleFonts.raleway(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xff3A3845),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Public Speaking Class',
+                      style: GoogleFonts.raleway(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xff3A3845),
+                      ),
+                    ),
+                    Spacer(),
+                    Row(
+                      children: [
+                        Text(
+                          '30/60',
+                          style: GoogleFonts.raleway(
+                            fontSize: 12,
+                            color: Color(0xff3A3845),
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            '30/60',
-                            style: GoogleFonts.raleway(
-                              fontSize: 12,
-                              color: Color(0xff3A3845),
-                            ),
+                        Spacer(),
+                        Text(
+                          'Continue',
+                          style: GoogleFonts.raleway(
+                            fontSize: 12,
+                            color: Color(0xff3A3845),
                           ),
-                          Spacer(),
-                          Text(
-                            'Continue',
-                            style: GoogleFonts.raleway(
-                              fontSize: 12,
-                              color: Color(0xff3A3845),
-                            ),
-                          ),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Image.asset(
-                            'assets/arrow_right.png',
-                            width: 13,
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Image.asset(
-                        'assets/progress.png',
-                      ),
-                    ],
-                  ),
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Image.asset(
+                          'assets/arrow_right.png',
+                          width: 13,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Image.asset(
+                      'assets/progress.png',
+                    ),
+                  ],
                 ),
-              ],
-            ))
+              ),
+            ],
+          ),
+        )
       ],
     );
   }
@@ -244,6 +258,7 @@ class HomePage extends StatelessWidget {
               children: [
                 HomePageCard2(
                   imageUrl: ('assets/whatsnew1.png'),
+                  title: 'See how other people\nthink about you!',
                 ),
                 HomePageCard(
                   imageUrl: ('assets/mbti1.png'),
@@ -256,6 +271,7 @@ class HomePage extends StatelessWidget {
               children: [
                 HomePageCard2(
                   imageUrl: ('assets/whatsnew2.png'),
+                  title: 'See how other people\nthink about you!',
                 ),
                 HomePageCard(
                   imageUrl: ('assets/mbti2.png'),
@@ -285,10 +301,13 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 HomePageCard2(
-                  imageUrl: ('assets/whatsnew1.png'),
+                  imageUrl: ('assets/trending1.png'),
+                  title:
+                      'Hasil Studi, Orangtua\nMilenial Lebih Suka\nAnak Belajar Soft Skill',
                 ),
-                HomePageCard(
-                  imageUrl: ('assets/mbti1.png'),
+                HomePageCard2(
+                  imageUrl: ('assets/trending2.png'),
+                  title: 'Penting, Tunjukkan Soft\nkill Saat Wawancara\nKerja',
                 ),
               ],
             ),

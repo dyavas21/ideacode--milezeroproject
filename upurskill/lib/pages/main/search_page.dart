@@ -5,7 +5,7 @@ import 'package:upurskill/theme.dart';
 import 'package:upurskill/widgets/exploreleft_card.dart';
 import 'package:upurskill/widgets/explorepage_card.dart';
 
-import '../widgets/bottom_navigation_style.dart';
+import '../../widgets/bottom_navigation_style.dart';
 
 class SearchPage extends StatelessWidget {
   @override
@@ -72,10 +72,15 @@ class SearchPage extends StatelessWidget {
                 isActive: true,
               ),
             ),
-            BottomNavigationStyle(
-              imageUrl: 'assets/feeds.png',
-              title: 'Feeds',
-              isActive: false,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/feed');
+              },
+              child: BottomNavigationStyle(
+                imageUrl: 'assets/feeds.png',
+                title: 'Feeds',
+                isActive: false,
+              ),
             ),
             BottomNavigationStyle(
               imageUrl: 'assets/course.png',
@@ -196,27 +201,13 @@ class SearchPage extends StatelessWidget {
                 progress: 'In progress',
                 title: 'Public Speaking',
                 enrolled: '1200 enrolled',
+                imageUrl: 'assets/explore_card1.png',
               ),
               ExplorePageCard(
                 progress: '',
                 title: 'Public Speaking',
                 enrolled: '1200 enrolled',
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ExplorePageCard(
-                progress: '',
-                title: 'Public Speaking',
-                enrolled: '1200 enrolled',
-              ),
-              ExplorePageCard(
-                progress: '',
-                title: 'Public Speaking',
-                enrolled: '1200 enrolled',
+                imageUrl: 'assets/explore_card2.png',
               ),
             ],
           ),
@@ -228,11 +219,31 @@ class SearchPage extends StatelessWidget {
                 progress: '',
                 title: 'Public Speaking',
                 enrolled: '1200 enrolled',
+                imageUrl: 'assets/explore_card3.png',
               ),
               ExplorePageCard(
                 progress: '',
                 title: 'Public Speaking',
                 enrolled: '1200 enrolled',
+                imageUrl: 'assets/explore_card4.png',
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ExplorePageCard(
+                progress: '',
+                title: 'Public Speaking',
+                enrolled: '1200 enrolled',
+                imageUrl: 'assets/explore_card5.png',
+              ),
+              ExplorePageCard(
+                progress: '',
+                title: 'Public Speaking',
+                enrolled: '1200 enrolled',
+                imageUrl: 'assets/explore_card6.png',
               ),
             ],
           ),
