@@ -15,3 +15,6 @@ https://drive.google.com/drive/folders/1YJK5B0yEG6G-Ot2-WjimkH2_TA9vJGtN
 
 Link PPT
 https://binusianorg-my.sharepoint.com/:p:/r/personal/cheryl_almeira_binus_ac_id/_layouts/15/Doc.aspx?sourcedoc=%7B7F210D51-017B-481E-A070-A4446DEFE400%7D&file=MilezeroProject_Ideacode_F0TH.pptx&action=edit&mobileredirect=true&PreviousSessionID=77dfbb36-ef45-b048-3146-a0a8c3e5d1f9&cid=9e61afbb-f514-4886-8815-7c8593bfd391
+
+Link Prototype
+https://www.figma.com/proto/jmWapQbXWyoA2d8oJh9hjO/UpUrSkill-MilezProject?node-id=82%3A122&scaling=scale-down&starting-point-node-id=82%3A190&show-proto-sidebar=1
