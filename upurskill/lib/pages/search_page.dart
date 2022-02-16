@@ -7,7 +7,7 @@ import 'package:upurskill/widgets/explorepage_card.dart';
 
 import '../widgets/bottom_navigation_style.dart';
 
-class ExplorePage extends StatelessWidget {
+class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,76 +16,7 @@ class ExplorePage extends StatelessWidget {
           top: 73,
         ),
         children: [
-          Padding(
-            padding: const EdgeInsets.only(
-              right: 38,
-              left: 38,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Learn a lot of\nskills now!',
-                  style: GoogleFonts.raleway(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700,
-                    color: blackColor,
-                  ),
-                ),
-                SizedBox(
-                  height: 19,
-                ),
-                Container(
-                    width: double.infinity,
-                    height: 36,
-                    decoration: BoxDecoration(
-                      color: Color(0xffF2EFFF),
-                      borderRadius: BorderRadius.circular(40),
-                    ),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            left: 16,
-                            top: 9,
-                            bottom: 8,
-                          ),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.pushNamed(context, '/search');
-                            },
-                            child: Text(
-                              'search course',
-                              style: GoogleFonts.raleway(
-                                fontSize: 16,
-                                color: Color(0xff808080),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Spacer(),
-                        Container(
-                          width: 42,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0xff7B61FF),
-                          ),
-                          child: Center(
-                            child: Image.asset(
-                              'assets/explore.png',
-                              color: Colors.white,
-                              width: 20,
-                            ),
-                          ),
-                        )
-                      ],
-                    )),
-                SizedBox(
-                  height: 26,
-                ),
-              ],
-            ),
-          ),
+          title(),
           ScrollCard(),
           SizedBox(
             height: 19,
@@ -167,17 +98,6 @@ class ExplorePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Learn a lot of\nskills now!',
-            style: GoogleFonts.raleway(
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
-              color: blackColor,
-            ),
-          ),
-          SizedBox(
-            height: 19,
-          ),
           Container(
               width: double.infinity,
               height: 36,

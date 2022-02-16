@@ -4,6 +4,10 @@ import 'package:shimmer/shimmer.dart';
 import 'package:upurskill/theme.dart';
 
 class HomePageCard2 extends StatelessWidget {
+  String? imageUrl;
+  HomePageCard2({
+    this.imageUrl,
+  });
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -11,21 +15,11 @@ class HomePageCard2 extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(4),
-            color: whiteGreyColor2,
           ),
           width: (MediaQuery.of(context).size.width - 106) / 2,
           height: 120,
-          padding: EdgeInsets.all(14),
           margin: EdgeInsets.only(top: 12),
-          child: Align(
-            alignment: Alignment.bottomRight,
-            child: Text(
-              'Try Now!',
-              style: GoogleFonts.raleway(
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ),
+          child: Image.asset(imageUrl!),
         ),
         SizedBox(
           height: 13,

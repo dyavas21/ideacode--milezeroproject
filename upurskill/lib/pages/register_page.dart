@@ -6,37 +6,80 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        padding: EdgeInsets.only(
-          right: 42,
-          left: 45,
-        ),
+      body: Stack(
         children: [
-          title(),
-          emailInput(),
-          passwordInput(),
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, '/home');
-            },
-            child: registerButton(),
-          ),
-          SizedBox(
-            height: 101,
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/login');
-            },
-            child: Text(
-              'Login',
-              style: GoogleFonts.raleway(
-                fontSize: 18,
-                color: blackColor,
-                decoration: TextDecoration.underline,
-              ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Image.asset(
+              'assets/splash_screen.png',
             ),
           ),
+          Align(
+            alignment: Alignment.topCenter,
+            child: Image.asset(
+              'assets/splash_screen2.png',
+            ),
+          ),
+          ListView(
+            children: [
+              title(),
+              usernameInput(),
+              emailInput(),
+              passwordInput(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+                child: registerButton(),
+              ),
+              Container(
+                margin: EdgeInsets.only(
+                  top: 20,
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      'Forgot Password',
+                      style: GoogleFonts.raleway(
+                        fontSize: 16,
+                        color: Color(0xff000000),
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 105,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Already have an account?',
+                          style: GoogleFonts.raleway(
+                            color: Color(0xff3A3845),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/login');
+                          },
+                          child: Text(
+                            'Login',
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: Color(0xff3A3845),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
@@ -44,14 +87,17 @@ class RegisterPage extends StatelessWidget {
 
   Widget title() {
     return Container(
-      margin: EdgeInsets.only(top: 260),
+      margin: EdgeInsets.only(
+        top: 197,
+        left: 45,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'Register',
             style: GoogleFonts.raleway(
-              fontSize: 44,
+              fontSize: 30,
               fontWeight: FontWeight.w700,
               color: Color(0xff000000),
             ),
@@ -60,9 +106,9 @@ class RegisterPage extends StatelessWidget {
             height: 10,
           ),
           Text(
-            'Register',
+            'Create your account\nand upgrade yourself!',
             style: GoogleFonts.raleway(
-              fontSize: 32,
+              fontSize: 22,
               color: Color(0xff000000),
             ),
           ),
@@ -71,9 +117,13 @@ class RegisterPage extends StatelessWidget {
     );
   }
 
-  Widget emailInput() {
+  Widget usernameInput() {
     return Container(
-      margin: EdgeInsets.only(top: 51),
+      margin: EdgeInsets.only(
+        top: 38,
+        left: 39,
+        right: 38,
+      ),
       height: 52,
       width: double.infinity,
       padding: EdgeInsets.all(16),
@@ -83,18 +133,49 @@ class RegisterPage extends StatelessWidget {
       ),
       child: TextFormField(
         decoration: InputDecoration.collapsed(
-            hintText: 'username or email',
-            hintStyle: GoogleFonts.raleway(
-              fontSize: 18,
-              color: Color(0xff808080),
-            )),
+          hintText: 'username',
+          hintStyle: GoogleFonts.raleway(
+            fontSize: 18,
+            color: Color(0xff808080),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget emailInput() {
+    return Container(
+      margin: EdgeInsets.only(
+        top: 16,
+        left: 39,
+        right: 38,
+      ),
+      height: 52,
+      width: double.infinity,
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(4),
+        color: Color(0xffF5F5F5),
+      ),
+      child: TextFormField(
+        decoration: InputDecoration.collapsed(
+          hintText: 'email',
+          hintStyle: GoogleFonts.raleway(
+            fontSize: 18,
+            color: Color(0xff808080),
+          ),
+        ),
       ),
     );
   }
 
   Widget passwordInput() {
     return Container(
-      margin: EdgeInsets.only(top: 16),
+      margin: EdgeInsets.only(
+        top: 16,
+        left: 39,
+        right: 38,
+      ),
       height: 52,
       width: double.infinity,
       padding: EdgeInsets.all(16),
@@ -105,18 +186,23 @@ class RegisterPage extends StatelessWidget {
       child: TextFormField(
         obscureText: true,
         decoration: InputDecoration.collapsed(
-            hintText: 'password',
-            hintStyle: GoogleFonts.raleway(
-              fontSize: 18,
-              color: Color(0xff808080),
-            )),
+          hintText: 'password',
+          hintStyle: GoogleFonts.raleway(
+            fontSize: 18,
+            color: Color(0xff808080),
+          ),
+        ),
       ),
     );
   }
 
   Widget registerButton() {
     return Container(
-      margin: EdgeInsets.only(top: 16),
+      margin: EdgeInsets.only(
+        top: 16,
+        left: 39,
+        right: 38,
+      ),
       height: 52,
       width: double.infinity,
       padding: EdgeInsets.only(
@@ -125,7 +211,7 @@ class RegisterPage extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
-        color: Color(0xff000000),
+        color: Color(0xff3A3845),
       ),
       child: Center(
         child: Text(
@@ -140,28 +226,22 @@ class RegisterPage extends StatelessWidget {
     );
   }
 
-  Widget createButton() {
-    return Container(
-      margin: EdgeInsets.only(top: 25),
-      height: 52,
-      width: double.infinity,
-      padding: EdgeInsets.only(
-        top: 15,
-        bottom: 16,
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(4),
-        color: darkGreyColor,
-      ),
-      child: Center(
-        child: Text(
-          'create a new account',
-          style: GoogleFonts.raleway(
-            fontSize: 18,
-            color: blackColor,
+  Widget Gambar() {
+    return Stack(
+      children: [
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Image.asset(
+            'assets/splash_screen.png',
           ),
         ),
-      ),
+        Align(
+          alignment: Alignment.topCenter,
+          child: Image.asset(
+            'assets/splash_screen2.png',
+          ),
+        ),
+      ],
     );
   }
 }

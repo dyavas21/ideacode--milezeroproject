@@ -26,18 +26,25 @@ class ExplorePageCard extends StatelessWidget {
           ),
           width: (MediaQuery.of(context).size.width - 106) / 2,
           height: 120,
-          padding: EdgeInsets.only(
-            left: 16,
-            top: 11,
-          ),
-          child: Align(
-            alignment: Alignment.topLeft,
-            child: Text(
-              progress!,
-              style: GoogleFonts.raleway(
-                color: blackColor,
+          child: Stack(
+            children: [
+              Image.asset(
+                'assets/trending.png',
+                fit: BoxFit.cover,
               ),
-            ),
+              Padding(
+                padding: EdgeInsets.only(
+                  top: 11,
+                  left: 16,
+                ),
+                child: Text(
+                  progress!,
+                  style: GoogleFonts.raleway(
+                    color: Color(0xff3A3845),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
         SizedBox(

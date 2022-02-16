@@ -6,62 +6,78 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        padding: EdgeInsets.only(
-          right: 42,
-          left: 45,
-        ),
+      body: Stack(
         children: [
-          title(),
-          emailInput(),
-          passwordInput(),
-          GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/home');
-              },
-              child: loginButton()),
-          SizedBox(
-            height: 20,
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Image.asset(
+              'assets/splash_screen.png',
+            ),
           ),
-          Center(
-            child: Text(
-              'Forgot Password',
-              style: GoogleFonts.raleway(
-                fontSize: 16,
-                color: Color(0xff000000),
-                decoration: TextDecoration.underline,
+          Align(
+            alignment: Alignment.topCenter,
+            child: Image.asset(
+              'assets/splash_screen2.png',
+            ),
+          ),
+          ListView(
+            children: [
+              title(),
+              emailInput(),
+              passwordInput(),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/home');
+                  },
+                  child: loginButton()),
+              Container(
+                margin: EdgeInsets.only(
+                  top: 20,
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      'Forgot Password',
+                      style: GoogleFonts.raleway(
+                        fontSize: 16,
+                        color: Color(0xff000000),
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 110,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Don’t have an account?',
+                          style: GoogleFonts.raleway(
+                            color: Color(0xff3A3845),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/register');
+                          },
+                          child: Text(
+                            'Register',
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: Color(0xff3A3845),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ),
-          SizedBox(
-            height: 122,
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, '/register');
-            },
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Don’t have an account?',
-                  style: GoogleFonts.raleway(
-                    color: Color(0xff3A3845),
-                  ),
-                ),
-                SizedBox(
-                  width: 5,
-                ),
-                Text(
-                  'Register',
-                  style: TextStyle(
-                    decoration: TextDecoration.underline,
-                    color: Color(0xff3A3845),
-                  ),
-                ),
-              ],
-            ),
-          ),
+            ],
+          )
         ],
       ),
     );
@@ -69,14 +85,17 @@ class LoginPage extends StatelessWidget {
 
   Widget title() {
     return Container(
-      margin: EdgeInsets.only(top: 260),
+      margin: EdgeInsets.only(
+        top: 260,
+        left: 45,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'Login',
             style: GoogleFonts.raleway(
-              fontSize: 44,
+              fontSize: 30,
               fontWeight: FontWeight.w700,
               color: Color(0xff000000),
             ),
@@ -87,7 +106,7 @@ class LoginPage extends StatelessWidget {
           Text(
             'Hi, let’s upgrade your\nskills here!',
             style: GoogleFonts.raleway(
-              fontSize: 32,
+              fontSize: 22,
               color: Color(0xff000000),
             ),
           ),
@@ -98,7 +117,11 @@ class LoginPage extends StatelessWidget {
 
   Widget emailInput() {
     return Container(
-      margin: EdgeInsets.only(top: 38),
+      margin: EdgeInsets.only(
+        top: 38,
+        left: 39,
+        right: 38,
+      ),
       height: 52,
       width: double.infinity,
       padding: EdgeInsets.all(16),
@@ -120,7 +143,11 @@ class LoginPage extends StatelessWidget {
 
   Widget passwordInput() {
     return Container(
-      margin: EdgeInsets.only(top: 16),
+      margin: EdgeInsets.only(
+        top: 16,
+        left: 39,
+        right: 38,
+      ),
       height: 52,
       width: double.infinity,
       padding: EdgeInsets.all(16),
@@ -131,18 +158,23 @@ class LoginPage extends StatelessWidget {
       child: TextFormField(
         obscureText: true,
         decoration: InputDecoration.collapsed(
-            hintText: 'password',
-            hintStyle: GoogleFonts.raleway(
-              fontSize: 18,
-              color: Color(0xff808080),
-            )),
+          hintText: 'password',
+          hintStyle: GoogleFonts.raleway(
+            fontSize: 18,
+            color: Color(0xff808080),
+          ),
+        ),
       ),
     );
   }
 
   Widget loginButton() {
     return Container(
-      margin: EdgeInsets.only(top: 16),
+      margin: EdgeInsets.only(
+        top: 16,
+        left: 39,
+        right: 38,
+      ),
       height: 52,
       width: double.infinity,
       padding: EdgeInsets.only(
