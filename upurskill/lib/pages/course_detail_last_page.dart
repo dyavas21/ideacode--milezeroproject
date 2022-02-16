@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:upurskill/theme.dart';
 
-class CourseDetailPage extends StatelessWidget {
+class CourseDetailLastPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +48,7 @@ class CourseDetailPage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/course-last');
+                Navigator.pushNamed(context, '/quiz');
               },
               child: Container(
                 width: 248,
@@ -99,7 +99,7 @@ class CourseDetailPage extends StatelessWidget {
             height: 17,
           ),
           Image.asset(
-            'assets/sylabus_progress.png',
+            'assets/progress2.png',
           ),
           SizedBox(
             height: 6,
@@ -117,7 +117,7 @@ class CourseDetailPage extends StatelessWidget {
                 ),
               ),
               Text(
-                '30/60',
+                '60/60',
                 style: GoogleFonts.raleway(
                   fontSize: 12,
                   color: Color(
@@ -131,7 +131,7 @@ class CourseDetailPage extends StatelessWidget {
             height: 27,
           ),
           Text(
-            'Knowing your audience.',
+            'Why is confidence important\nin public speaking?',
             style: GoogleFonts.raleway(
               fontSize: 22,
               fontWeight: FontWeight.w700,
@@ -139,21 +139,34 @@ class CourseDetailPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 22,
+            height: 17,
           ),
           Text(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua',
+            'Exhibiting confidence in public speaking is a skill that anyone can possess with the proper mindset and preparation. When you look, sound, and feel your best, you are more likely to connect with your audience, convey your key points with conviction, and get the results you seek.',
             style: GoogleFonts.raleway(
               fontSize: 12,
               color: Color(0xff3A3845),
               height: 1.5,
             ),
+            textAlign: TextAlign.justify,
           ),
           SizedBox(
-            height: 22,
+            height: 12,
           ),
           Text(
-            'Implementation',
+            'Confident speakers focus on clarity and conviction in their delivery and display the right body language. They also focus on their audience, rather than dwelling on their flaws and potential slip-ups.',
+            style: GoogleFonts.raleway(
+              fontSize: 12,
+              color: Color(0xff3A3845),
+              height: 1.5,
+            ),
+            textAlign: TextAlign.justify,
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Text(
+            'Tips to Gain Confidence',
             style: GoogleFonts.raleway(
               fontSize: 16,
               fontWeight: FontWeight.w700,
@@ -163,35 +176,117 @@ class CourseDetailPage extends StatelessWidget {
           SizedBox(
             height: 13,
           ),
-          Image.asset(
-            'assets/implementation.png',
-          ),
-          SizedBox(
-            height: 7,
-          ),
-          Center(
-            child: Text(
-              'Great Speech from Cheryl',
-              style: GoogleFonts.raleway(
-                fontSize: 10,
-                color: Color(0xff3A3845),
-                fontStyle: FontStyle.italic,
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.only(
+                  left: 10,
+                ),
+                width: 2,
+                height: 2,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: blackColor,
+                ),
               ),
-            ),
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                'Rehearse When You’re Alone',
+                style: GoogleFonts.raleway(
+                  fontSize: 12,
+                  color: Color(0xff3A3845),
+                ),
+              ),
+            ],
           ),
           SizedBox(
-            height: 22,
+            height: 5,
           ),
-          Text(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Incididunt ut labore et dolore magna aliqua tempor incididunt ut labore et dolore magna aliqua.',
-            style: GoogleFonts.raleway(
-              fontSize: 12,
-              color: Color(0xff3A3845),
-              height: 1.5,
-            ),
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.only(
+                  left: 10,
+                ),
+                width: 2,
+                height: 2,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: blackColor,
+                ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                'Record Videos of Yourself and Critique Them',
+                style: GoogleFonts.raleway(
+                  fontSize: 12,
+                  color: Color(0xff3A3845),
+                ),
+              ),
+            ],
           ),
           SizedBox(
-            height: 22,
+            height: 5,
+          ),
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.only(
+                  left: 10,
+                ),
+                width: 2,
+                height: 2,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: blackColor,
+                ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                'Practice Speaking in Front of Family and Friends',
+                style: GoogleFonts.raleway(
+                  fontSize: 12,
+                  color: Color(0xff3A3845),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.only(
+                  left: 10,
+                ),
+                width: 2,
+                height: 2,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: blackColor,
+                ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                'Attend Public Speaking Events and Ask Questions',
+                style: GoogleFonts.raleway(
+                  fontSize: 12,
+                  color: Color(0xff3A3845),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 40,
           ),
           Text(
             '#ExpertTips',

@@ -29,7 +29,7 @@ class CourseSideMenu extends StatelessWidget {
                 Spacer(),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, '/course-detail');
+                    Navigator.pop(context);
                   },
                   child: Image.asset(
                     'assets/close.png',
@@ -73,15 +73,10 @@ class CourseSideMenu extends StatelessWidget {
             SizedBox(
               height: 26,
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/quiz');
-              },
-              child: CourseDetail(
-                title: 'Quiz',
-                isDone: false,
-                isBottom: false,
-              ),
+            CourseDetail(
+              title: 'Quiz',
+              isDone: false,
+              isBottom: false,
             ),
             Spacer(),
             GestureDetector(

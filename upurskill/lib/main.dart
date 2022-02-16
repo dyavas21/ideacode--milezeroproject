@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:upurskill/pages/course_detail_last_page.dart';
 import 'package:upurskill/pages/course_detail_page.dart';
 import 'package:upurskill/pages/course_side_menu.dart';
 import 'package:upurskill/pages/main/course_page.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         '/result': (context) => QuizResultPage(),
         '/feed': (context) => FeedPage(),
         '/course': (context) => CoursePage(),
+        '/course-last': (context) => CourseDetailLastPage(),
       },
     );
   }

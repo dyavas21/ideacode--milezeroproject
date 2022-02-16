@@ -77,112 +77,113 @@ class QuizPage extends StatelessWidget {
             SizedBox(
               height: 12,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 40),
-                ),
-                Container(
-                  padding: EdgeInsets.only(
-                    top: 7,
-                    left: 15,
-                    bottom: 7,
-                  ),
-                  width: 90,
-                  height: 54,
-                  decoration: BoxDecoration(
-                    color: Color(0xffF2EFFF),
-                    borderRadius: BorderRadius.circular(4),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '10',
-                        style: GoogleFonts.raleway(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 40,
+                right: 32,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(
+                      top: 7,
+                      left: 15,
+                      bottom: 7,
+                    ),
+                    width: 90,
+                    height: 54,
+                    decoration: BoxDecoration(
+                      color: Color(0xffF2EFFF),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '10',
+                          style: GoogleFonts.raleway(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                      Spacer(),
-                      Text(
-                        'Questions',
-                        style: GoogleFonts.raleway(
-                          fontSize: 12,
-                          color: Color(0xff3A3845),
+                        Spacer(),
+                        Text(
+                          'Questions',
+                          style: GoogleFonts.raleway(
+                            fontSize: 12,
+                            color: Color(0xff3A3845),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-                Spacer(),
-                Container(
-                  padding: EdgeInsets.only(
-                    top: 7,
-                    left: 15,
-                    bottom: 7,
-                  ),
-                  width: 90,
-                  height: 54,
-                  decoration: BoxDecoration(
-                    color: Color(0xffF2EFFF),
-                    borderRadius: BorderRadius.circular(4),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Free',
-                        style: GoogleFonts.raleway(
-                          fontWeight: FontWeight.w600,
+                  Container(
+                    padding: EdgeInsets.only(
+                      top: 7,
+                      left: 15,
+                      bottom: 7,
+                    ),
+                    width: 90,
+                    height: 54,
+                    decoration: BoxDecoration(
+                      color: Color(0xffF2EFFF),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Free',
+                          style: GoogleFonts.raleway(
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                      Spacer(),
-                      Text(
-                        'Certificate',
-                        style: GoogleFonts.raleway(
-                          fontSize: 12,
-                          color: Color(0xff3A3845),
+                        Spacer(),
+                        Text(
+                          'Certificate',
+                          style: GoogleFonts.raleway(
+                            fontSize: 12,
+                            color: Color(0xff3A3845),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-                Spacer(),
-                Container(
-                  padding: EdgeInsets.only(
-                    top: 7,
-                    left: 15,
-                    bottom: 7,
-                  ),
-                  width: 115,
-                  height: 54,
-                  decoration: BoxDecoration(
-                    color: Color(0xffF2EFFF),
-                    borderRadius: BorderRadius.circular(4),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Type',
-                        style: GoogleFonts.raleway(
-                          fontWeight: FontWeight.w600,
+                  Container(
+                    padding: EdgeInsets.only(
+                      top: 7,
+                      left: 15,
+                      bottom: 7,
+                    ),
+                    width: 115,
+                    height: 54,
+                    decoration: BoxDecoration(
+                      color: Color(0xffF2EFFF),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Type',
+                          style: GoogleFonts.raleway(
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                      Spacer(),
-                      Text(
-                        'Multiple-choice',
-                        style: GoogleFonts.raleway(
-                          fontSize: 12,
-                          color: Color(0xff3A3845),
+                        Spacer(),
+                        Text(
+                          'Multiple-choice',
+                          style: GoogleFonts.raleway(
+                            fontSize: 12,
+                            color: Color(0xff3A3845),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             SizedBox(
               height: 26,
