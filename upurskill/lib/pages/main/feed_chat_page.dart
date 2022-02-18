@@ -98,12 +98,6 @@ class FeedChatPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      // Text(
-                      //   'Start your question with “What”, “How”,\n “Why”, etc.',
-                      //   style: GoogleFonts.raleway(
-                      //     color: Color(0xff808080),
-                      //   ),
-                      // ),
                     ),
                   ),
                 ],
