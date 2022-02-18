@@ -78,11 +78,94 @@ class SearchPage extends StatelessWidget {
           SizedBox(
             height: 19,
           ),
-          GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/public-speaking');
-              },
-              child: title2()),
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 38,
+              right: 38,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/public-speaking');
+                      },
+                      child: ExplorePageCard(
+                        progress: 'In progress',
+                        title: 'Public Speaking',
+                        enrolled: '1200 enrolled',
+                        imageUrl: 'assets/explore_card1.png',
+                      ),
+                    ),
+                    ExplorePageCard(
+                      progress: '',
+                      title: 'Time Management',
+                      enrolled: '890 enrolled',
+                      imageUrl: 'assets/explore_card2.png',
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ExplorePageCard(
+                      progress: '',
+                      title: 'Leadership',
+                      enrolled: '810 enrolled',
+                      imageUrl: 'assets/explore_card3.png',
+                    ),
+                    ExplorePageCard(
+                      progress: '',
+                      title: 'Critical Thinking',
+                      enrolled: '763 enrolled',
+                      imageUrl: 'assets/explore_card4.png',
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ExplorePageCard(
+                      progress: '',
+                      title: 'Interview',
+                      enrolled: '625 enrolled',
+                      imageUrl: 'assets/explore_card5.png',
+                    ),
+                    ExplorePageCard(
+                      progress: '',
+                      title: 'Portfolio',
+                      enrolled: '523 enrolled',
+                      imageUrl: 'assets/explore_card6.png',
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ExplorePageCard(
+                      progress: 'In progress',
+                      title: 'Public Speaking',
+                      enrolled: '1200 enrolled',
+                      imageUrl: 'assets/explore_card1.png',
+                    ),
+                    ExplorePageCard(
+                      progress: '',
+                      title: 'Time Management',
+                      enrolled: '890 enrolled',
+                      imageUrl: 'assets/explore_card2.png',
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -115,94 +198,11 @@ class SearchPage extends StatelessWidget {
               title: 'Trending',
               isColorBox: false,
             ),
+            SizedBox(
+              width: 30,
+            ),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget title2() {
-    return Padding(
-      padding: const EdgeInsets.only(
-        left: 38,
-        right: 38,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ExplorePageCard(
-                progress: 'In progress',
-                title: 'Public Speaking',
-                enrolled: '1200 enrolled',
-                imageUrl: 'assets/explore_card1.png',
-              ),
-              ExplorePageCard(
-                progress: '',
-                title: 'Time Management',
-                enrolled: '890 enrolled',
-                imageUrl: 'assets/explore_card2.png',
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ExplorePageCard(
-                progress: '',
-                title: 'Leadership',
-                enrolled: '810 enrolled',
-                imageUrl: 'assets/explore_card3.png',
-              ),
-              ExplorePageCard(
-                progress: '',
-                title: 'Critical Thinking',
-                enrolled: '763 enrolled',
-                imageUrl: 'assets/explore_card4.png',
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ExplorePageCard(
-                progress: '',
-                title: 'Interview',
-                enrolled: '625 enrolled',
-                imageUrl: 'assets/explore_card5.png',
-              ),
-              ExplorePageCard(
-                progress: '',
-                title: 'Portfolio',
-                enrolled: '523 enrolled',
-                imageUrl: 'assets/explore_card6.png',
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ExplorePageCard(
-                progress: 'In progress',
-                title: 'Public Speaking',
-                enrolled: '1200 enrolled',
-                imageUrl: 'assets/explore_card1.png',
-              ),
-              ExplorePageCard(
-                progress: '',
-                title: 'Time Management',
-                enrolled: '890 enrolled',
-                imageUrl: 'assets/explore_card2.png',
-              ),
-            ],
-          ),
-        ],
       ),
     );
   }

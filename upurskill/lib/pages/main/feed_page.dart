@@ -37,7 +37,7 @@ class FeedPage extends StatelessWidget {
           FeedContainer(
             time: '14 m ago',
             judul: 'How can I become socially confident?',
-            name: 'Gede Dyava',
+            name: 'Darry Ramadhan',
             isi:
                 'Two words - stop caring.\nI’m a very confident guy. Like, I’m the type of person, who could go on stage, at the Grammy Awards, and sing in front of millions of people.',
             like: '52k',
@@ -45,7 +45,7 @@ class FeedPage extends StatelessWidget {
           FeedContainer(
             time: '17 m ago',
             judul: 'How can I develop self-confidence and\nself-esteem?',
-            name: 'Gede Dyava',
+            name: 'Gery Guinardi',
             isi:
                 'Read book 1 hour every day.\nEarly wakeup like 5.30 A.M to 6.00 A.M. Try to 30 minute Book, Newspaper,10–15 Minutes Excise early morning.',
             like: '31k',
@@ -53,7 +53,7 @@ class FeedPage extends StatelessWidget {
           FeedContainer(
             time: '25 m ago',
             judul: 'What\'s your biggest public speaking fear?',
-            name: 'Gede Dyava',
+            name: 'Cheryl Almeira',
             isi:
                 'Yes I do. I teach people how to present for a living and often find myself in the catastrophic position of having to speak publicly myself. Just because something makes you massively uncomfortable is not enough of,',
             like: '21k',

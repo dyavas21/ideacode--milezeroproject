@@ -18,7 +18,100 @@ class HomePage extends StatelessWidget {
         ),
         children: [
           title(),
-          Progress(),
+          Container(
+            margin: EdgeInsets.only(
+              top: 41,
+            ),
+            child: Text(
+              'Your Progress',
+              style: GoogleFonts.raleway(
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 13,
+          ),
+          Container(
+            width: double.infinity,
+            height: 88,
+            decoration: BoxDecoration(
+              color: whiteGreyColor2,
+              borderRadius: BorderRadius.circular(
+                4,
+              ),
+            ),
+            child: Stack(
+              children: [
+                Image.asset(
+                  'assets/bg_course.png',
+                  width: double.infinity,
+                  height: 88,
+                  fit: BoxFit.cover,
+                ),
+                Container(
+                  padding: EdgeInsets.only(
+                    top: 13,
+                    left: 20,
+                    right: 23,
+                    bottom: 13,
+                  ),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/public-speaking');
+                    },
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Public Speaking Class',
+                          style: GoogleFonts.raleway(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xff3A3845),
+                          ),
+                        ),
+                        Spacer(),
+                        Row(
+                          children: [
+                            Text(
+                              '30/60',
+                              style: GoogleFonts.raleway(
+                                fontSize: 12,
+                                color: Color(0xff3A3845),
+                              ),
+                            ),
+                            Spacer(),
+                            Text(
+                              'Continue',
+                              style: GoogleFonts.raleway(
+                                fontSize: 12,
+                                color: Color(0xff3A3845),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 8,
+                            ),
+                            Image.asset(
+                              'assets/arrow_right.png',
+                              width: 13,
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Image.asset(
+                          'assets/progress.png',
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
           SizedBox(
             height: 26,
           ),
@@ -133,103 +226,6 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget Progress() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          margin: EdgeInsets.only(
-            top: 41,
-          ),
-          child: Text(
-            'Your Progress',
-            style: GoogleFonts.raleway(
-              fontSize: 16,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ),
-        SizedBox(
-          height: 13,
-        ),
-        Container(
-          width: double.infinity,
-          height: 88,
-          decoration: BoxDecoration(
-            color: whiteGreyColor2,
-            borderRadius: BorderRadius.circular(
-              4,
-            ),
-          ),
-          child: Stack(
-            children: [
-              Image.asset(
-                'assets/bg_course.png',
-                width: double.infinity,
-                height: 88,
-                fit: BoxFit.cover,
-              ),
-              Container(
-                padding: EdgeInsets.only(
-                  top: 13,
-                  left: 20,
-                  right: 23,
-                  bottom: 13,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Public Speaking Class',
-                      style: GoogleFonts.raleway(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xff3A3845),
-                      ),
-                    ),
-                    Spacer(),
-                    Row(
-                      children: [
-                        Text(
-                          '30/60',
-                          style: GoogleFonts.raleway(
-                            fontSize: 12,
-                            color: Color(0xff3A3845),
-                          ),
-                        ),
-                        Spacer(),
-                        Text(
-                          'Continue',
-                          style: GoogleFonts.raleway(
-                            fontSize: 12,
-                            color: Color(0xff3A3845),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        Image.asset(
-                          'assets/arrow_right.png',
-                          width: 13,
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Image.asset(
-                      'assets/progress.png',
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        )
-      ],
-    );
-  }
-
   Widget title2() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -262,6 +258,7 @@ class HomePage extends StatelessWidget {
                 ),
                 HomePageCard(
                   imageUrl: ('assets/mbti1.png'),
+                  title: 'Do the MBTI test!',
                 ),
               ],
             ),
@@ -271,10 +268,11 @@ class HomePage extends StatelessWidget {
               children: [
                 HomePageCard2(
                   imageUrl: ('assets/whatsnew2.png'),
-                  title: 'See how other people\nthink about you!',
+                  title: 'Let’s know more about\nyouerself!',
                 ),
                 HomePageCard(
                   imageUrl: ('assets/mbti2.png'),
+                  title: 'Do personality\ntest!',
                 ),
               ],
             ),

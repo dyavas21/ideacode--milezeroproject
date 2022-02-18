@@ -39,13 +39,18 @@ class CoursePage extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          CourseCard(
-            title: 'Public Speaking Class',
-            number: '30/60',
-            imageUrlProgress: 'assets/progress4.png',
-            imageUrlCourse: 'assets/bg_course.png',
-            isGrey: true,
-            detail: 'Continue',
+          InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, '/public-speaking');
+            },
+            child: CourseCard(
+              title: 'Public Speaking Class',
+              number: '30/60',
+              imageUrlProgress: 'assets/progress4.png',
+              imageUrlCourse: 'assets/bg_course.png',
+              isGrey: true,
+              detail: 'Continue',
+            ),
           ),
           SizedBox(
             height: 10,

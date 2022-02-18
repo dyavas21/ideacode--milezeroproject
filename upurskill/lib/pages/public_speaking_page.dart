@@ -10,40 +10,53 @@ class PublicSpeakingPage extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-              height: 267,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
-                ),
-                color: Color(0xffF2EFFF),
+            height: 267,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
               ),
-              child: Stack(
-                children: [
-                  Image.asset(
-                    'assets/course_detail.png',
-                    height: 267,
-                    width: MediaQuery.of(context).size.width,
-                    fit: BoxFit.cover,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        left: 42,
-                        top: 70,
-                      ),
-                      child: Image.asset(
-                        'assets/back-btn.png',
-                        width: 24,
-                      ),
+              color: Color(0xffF2EFFF),
+            ),
+            child: Stack(
+              children: [
+                Image.asset(
+                  'assets/course_detail.png',
+                  height: 267,
+                  width: MediaQuery.of(context).size.width,
+                  fit: BoxFit.cover,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      left: 42,
+                      top: 70,
+                    ),
+                    child: Image.asset(
+                      'assets/back-btn.png',
+                      width: 24,
                     ),
                   ),
-                ],
-              )),
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      right: 48,
+                    ),
+                    child: Image.asset(
+                      'assets/share.png',
+                      width: 24,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
           Header2(),
         ],
       ),

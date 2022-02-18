@@ -7,8 +7,10 @@ import 'package:upurskill/theme.dart';
 
 class HomePageCard extends StatelessWidget {
   String? imageUrl;
+  String? title;
   HomePageCard({
     this.imageUrl,
+    this.title,
   });
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class HomePageCard extends StatelessWidget {
           height: 13,
         ),
         Text(
-          'Do the MBTI test!',
+          title!,
           style: GoogleFonts.raleway(),
         )
       ],
