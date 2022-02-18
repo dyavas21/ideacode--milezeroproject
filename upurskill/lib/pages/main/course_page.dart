@@ -45,6 +45,7 @@ class CoursePage extends StatelessWidget {
             imageUrlProgress: 'assets/progress4.png',
             imageUrlCourse: 'assets/bg_course.png',
             isGrey: true,
+            detail: 'Continue',
           ),
           SizedBox(
             height: 10,
@@ -55,6 +56,7 @@ class CoursePage extends StatelessWidget {
             imageUrlProgress: 'assets/progress3.png',
             imageUrlCourse: 'assets/bg_course.png',
             isGrey: true,
+            detail: 'Continue',
           ),
           SizedBox(
             height: 26,
@@ -71,20 +73,22 @@ class CoursePage extends StatelessWidget {
           ),
           CourseCard(
             title: 'Public Speaking Class',
-            number: '30/60',
+            number: 'Completed',
             imageUrlProgress: 'assets/progress5.png',
             imageUrlCourse: 'assets/bg_course_complete.png',
             isGrey: false,
+            detail: 'Detail',
           ),
           SizedBox(
             height: 10,
           ),
           CourseCard(
             title: 'Cooking Class',
-            number: '12/25',
+            number: 'Completed',
             imageUrlProgress: 'assets/progress5.png',
             imageUrlCourse: 'assets/bg_course_complete.png',
             isGrey: false,
+            detail: 'Detail',
           ),
         ],
       ),

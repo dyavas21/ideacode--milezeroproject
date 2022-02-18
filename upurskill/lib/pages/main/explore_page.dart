@@ -37,7 +37,7 @@ class ExplorePage extends StatelessWidget {
                 ),
                 Container(
                     width: double.infinity,
-                    height: 36,
+                    height: 42,
                     decoration: BoxDecoration(
                       color: Color(0xffF2EFFF),
                       borderRadius: BorderRadius.circular(40),
@@ -46,9 +46,9 @@ class ExplorePage extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(
-                            left: 16,
-                            top: 9,
-                            bottom: 8,
+                            left: 23,
+                            top: 13,
+                            bottom: 13,
                           ),
                           child: GestureDetector(
                             onTap: () {
@@ -91,10 +91,11 @@ class ExplorePage extends StatelessWidget {
             height: 19,
           ),
           GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/public-speaking');
-              },
-              child: title2()),
+            onTap: () {
+              Navigator.pushNamed(context, '/public-speaking');
+            },
+            child: title2(),
+          ),
         ],
       ),
       floatingActionButton: Container(
@@ -168,74 +169,6 @@ class ExplorePage extends StatelessWidget {
     );
   }
 
-  Widget title() {
-    return Padding(
-      padding: const EdgeInsets.only(
-        right: 38,
-        left: 38,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Learn a lot of\nskills now!',
-            style: GoogleFonts.raleway(
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
-              color: blackColor,
-            ),
-          ),
-          SizedBox(
-            height: 19,
-          ),
-          Container(
-              width: double.infinity,
-              height: 36,
-              decoration: BoxDecoration(
-                color: Color(0xffF2EFFF),
-                borderRadius: BorderRadius.circular(40),
-              ),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 16,
-                      top: 9,
-                      bottom: 8,
-                    ),
-                    child: Text(
-                      'search course',
-                      style: GoogleFonts.raleway(
-                        fontSize: 16,
-                        color: Color(0xff808080),
-                      ),
-                    ),
-                  ),
-                  Spacer(),
-                  Container(
-                    width: 42,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xff7B61FF),
-                    ),
-                    child: Center(
-                      child: Image.asset(
-                        'assets/explore.png',
-                        color: Colors.white,
-                        width: 20,
-                      ),
-                    ),
-                  )
-                ],
-              )),
-          SizedBox(
-            height: 26,
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget ScrollCard() {
     return Container(
       margin: EdgeInsets.only(left: 38),
@@ -290,8 +223,8 @@ class ExplorePage extends StatelessWidget {
               ),
               ExplorePageCard(
                 progress: '',
-                title: 'Public Speaking',
-                enrolled: '1200 enrolled',
+                title: 'Time Management',
+                enrolled: '890 enrolled',
                 imageUrl: 'assets/explore_card2.png',
               ),
             ],
@@ -302,14 +235,14 @@ class ExplorePage extends StatelessWidget {
             children: [
               ExplorePageCard(
                 progress: '',
-                title: 'Public Speaking',
-                enrolled: '1200 enrolled',
+                title: 'Leadership',
+                enrolled: '810 enrolled',
                 imageUrl: 'assets/explore_card3.png',
               ),
               ExplorePageCard(
                 progress: '',
-                title: 'Public Speaking',
-                enrolled: '1200 enrolled',
+                title: 'Critical Thinking',
+                enrolled: '763 enrolled',
                 imageUrl: 'assets/explore_card4.png',
               ),
             ],
@@ -320,14 +253,14 @@ class ExplorePage extends StatelessWidget {
             children: [
               ExplorePageCard(
                 progress: '',
-                title: 'Public Speaking',
-                enrolled: '1200 enrolled',
+                title: 'Interview',
+                enrolled: '625 enrolled',
                 imageUrl: 'assets/explore_card5.png',
               ),
               ExplorePageCard(
                 progress: '',
-                title: 'Public Speaking',
-                enrolled: '1200 enrolled',
+                title: 'Portfolio',
+                enrolled: '523 enrolled',
                 imageUrl: 'assets/explore_card6.png',
               ),
             ],

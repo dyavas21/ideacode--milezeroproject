@@ -7,6 +7,7 @@ class CourseCard extends StatelessWidget {
   String? number;
   String? imageUrlProgress;
   String? imageUrlCourse;
+  String? detail;
   bool? isGrey;
 
   CourseCard({
@@ -15,6 +16,7 @@ class CourseCard extends StatelessWidget {
     this.imageUrlProgress,
     this.imageUrlCourse,
     this.isGrey,
+    this.detail,
   });
   @override
   Widget build(BuildContext context) {
@@ -75,14 +77,14 @@ class CourseCard extends StatelessWidget {
                     Spacer(),
                     isGrey!
                         ? Text(
-                            'Continue',
+                            detail!,
                             style: GoogleFonts.raleway(
                               fontSize: 12,
                               color: Color(0xff3A3845),
                             ),
                           )
                         : Text(
-                            'Continue',
+                            detail!,
                             style: GoogleFonts.raleway(
                               fontSize: 12,
                               color: Color(0xff808080),
