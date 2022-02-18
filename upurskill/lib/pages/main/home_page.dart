@@ -270,7 +270,7 @@ class HomePage extends StatelessWidget {
               children: [
                 HomePageCard2(
                   imageUrl: ('assets/whatsnew2.png'),
-                  title: 'Let’s know more about\nyouerself!',
+                  title: 'Let’s know more about\nyourself!',
                 ),
                 HomePageCard(
                   imageUrl: ('assets/mbti2.png'),
