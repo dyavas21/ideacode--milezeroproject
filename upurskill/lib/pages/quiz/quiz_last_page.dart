@@ -9,118 +9,103 @@ class QuizLastPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.only(
-          top: 54,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: Text(
-                'Quiz',
-                style: GoogleFonts.raleway(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xff3A3845),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            top: 10,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: Text(
+                  'Quiz',
+                  style: GoogleFonts.raleway(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xff3A3845),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 17,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 38,
-                right: 36,
+              SizedBox(
+                height: 17,
               ),
-              child: Image.asset(
-                'assets/progress2.png',
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 38,
+                  right: 36,
+                ),
+                child: Image.asset(
+                  'assets/progress2.png',
+                ),
               ),
-            ),
-            SizedBox(
-              height: 6,
-            ),
-            Row(
-              children: [
-                Container(),
-                Spacer(),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    right: 36,
-                  ),
-                  child: Text(
-                    '10/10',
-                    style: GoogleFonts.raleway(
-                      fontSize: 12,
+              SizedBox(
+                height: 6,
+              ),
+              Row(
+                children: [
+                  Container(),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      right: 36,
+                    ),
+                    child: Text(
+                      '10/10',
+                      style: GoogleFonts.raleway(
+                        fontSize: 12,
+                      ),
                     ),
                   ),
+                ],
+              ),
+              SizedBox(
+                height: 38,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 40,
+                  right: 37,
                 ),
-              ],
-            ),
-            SizedBox(
-              height: 38,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 40,
-                right: 37,
-              ),
-              child: Text(
-                'Let’s review what you\nhave done before.',
-                style: GoogleFonts.raleway(
-                  fontSize: 22,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xff3A3845),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 40,
-                right: 45,
-              ),
-              child: Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-                style: GoogleFonts.raleway(
-                  fontSize: 12,
-                  color: Color(0xff3A3845),
-                  height: 1.5,
+                child: Text(
+                  'Apakah penyebab terjadinya\nblank pada saat melakukan\npublic speaking?',
+                  style: GoogleFonts.raleway(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xff3A3845),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 63,
-            ),
-            QuizContainer(
-              isPurple: true,
-              question: 'Menghafal seluruh naskah',
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            QuizContainer(
-              isPurple: false,
-              question: 'Memahami poin naskah',
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            QuizContainer(
-              isPurple: false,
-              question: 'Melakukan persiapan panjang',
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            QuizContainer(
-              isPurple: false,
-              question: 'Percaya diri',
-            ),
-          ],
+              SizedBox(
+                height: 63,
+              ),
+              QuizContainer(
+                isPurple: true,
+                question: 'Menghafal seluruh naskah',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              QuizContainer(
+                isPurple: false,
+                question: 'Memahami poin naskah',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              QuizContainer(
+                isPurple: false,
+                question: 'Melakukan persiapan panjang',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              QuizContainer(
+                isPurple: false,
+                question: 'Percaya diri',
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: Container(

@@ -7,58 +7,61 @@ class PublicSpeakingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(
-        children: [
-          Container(
-            height: 267,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20),
+      body: SafeArea(
+        top: false,
+        child: ListView(
+          children: [
+            Container(
+              height: 267,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
+                color: Color(0xffF2EFFF),
               ),
-              color: Color(0xffF2EFFF),
-            ),
-            child: Stack(
-              children: [
-                Image.asset(
-                  'assets/course_detail.png',
-                  height: 267,
-                  width: MediaQuery.of(context).size.width,
-                  fit: BoxFit.cover,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      left: 42,
-                      top: 70,
-                    ),
-                    child: Image.asset(
-                      'assets/back-btn.png',
-                      width: 24,
+              child: Stack(
+                children: [
+                  Image.asset(
+                    'assets/course_detail.png',
+                    height: 267,
+                    width: MediaQuery.of(context).size.width,
+                    fit: BoxFit.cover,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 42,
+                        top: 70,
+                      ),
+                      child: Image.asset(
+                        'assets/back-btn.png',
+                        width: 24,
+                      ),
                     ),
                   ),
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                      right: 48,
-                    ),
-                    child: Image.asset(
-                      'assets/share.png',
-                      width: 24,
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        right: 48,
+                      ),
+                      child: Image.asset(
+                        'assets/share.png',
+                        width: 24,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Header2(),
-        ],
+            Header2(),
+          ],
+        ),
       ),
       floatingActionButton: Container(
         height: 117,
@@ -256,6 +259,9 @@ class PublicSpeakingPage extends StatelessWidget {
           Image.asset(
             'assets/sylabus.png',
             width: 110,
+          ),
+          SizedBox(
+            height: 130,
           ),
         ],
       ),

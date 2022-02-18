@@ -6,10 +6,13 @@ class CourseDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [
-          title(),
-        ],
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: ListView(
+          children: [
+            title(),
+          ],
+        ),
       ),
       floatingActionButton: Container(
         height: 94,
@@ -78,7 +81,7 @@ class CourseDetailPage extends StatelessWidget {
   Widget title() {
     return Container(
       margin: EdgeInsets.only(
-        top: 44,
+        top: 10,
         left: 38,
         right: 36,
       ),

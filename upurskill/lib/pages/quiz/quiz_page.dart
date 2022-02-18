@@ -8,208 +8,211 @@ class QuizPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.only(
-          top: 54,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: Text(
-                'Quiz',
-                style: GoogleFonts.raleway(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xff3A3845),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            top: 10,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: Text(
+                  'Quiz',
+                  style: GoogleFonts.raleway(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xff3A3845),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 31,
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                left: 38,
-                right: 37,
+              SizedBox(
+                height: 31,
               ),
-              width: double.infinity,
-              height: 119,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(4),
-              ),
-              child: Image.asset(
-                'assets/quiz.png',
-                height: 119,
+              Container(
+                margin: EdgeInsets.only(
+                  left: 38,
+                  right: 37,
+                ),
                 width: double.infinity,
-                fit: BoxFit.cover,
-              ),
-            ),
-            SizedBox(
-              height: 25,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 38),
-              child: Text(
-                'Let’s review what you\nhave done before.',
-                style: GoogleFonts.raleway(
-                  fontSize: 22,
-                  fontWeight: FontWeight.w700,
+                height: 119,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  color: Color(0xffF2EFFF),
+                ),
+                child: Image.asset(
+                  'assets/quiz.png',
+                  height: 119,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
                 ),
               ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 40,
-                right: 37,
+              SizedBox(
+                height: 25,
               ),
-              child: Text(
-                'After you learned all the materials, now it’s the time to challenge yourself!',
-                style: GoogleFonts.raleway(
-                  fontSize: 12,
-                  color: Color(0xff3A3845),
+              Padding(
+                padding: const EdgeInsets.only(left: 38),
+                child: Text(
+                  'Let’s review what you\nhave done before.',
+                  style: GoogleFonts.raleway(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 40,
-                right: 32,
+              SizedBox(
+                height: 12,
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.only(
-                      top: 7,
-                      left: 15,
-                      bottom: 7,
-                    ),
-                    width: 90,
-                    height: 54,
-                    decoration: BoxDecoration(
-                      color: Color(0xffF2EFFF),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          '10',
-                          style: GoogleFonts.raleway(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        Spacer(),
-                        Text(
-                          'Questions',
-                          style: GoogleFonts.raleway(
-                            fontSize: 12,
-                            color: Color(0xff3A3845),
-                          ),
-                        ),
-                      ],
-                    ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 40,
+                  right: 37,
+                ),
+                child: Text(
+                  'After you learned all the materials, now it’s the time to challenge yourself!',
+                  style: GoogleFonts.raleway(
+                    fontSize: 12,
+                    color: Color(0xff3A3845),
                   ),
-                  Container(
-                    padding: EdgeInsets.only(
-                      top: 7,
-                      left: 15,
-                      bottom: 7,
-                    ),
-                    width: 90,
-                    height: 54,
-                    decoration: BoxDecoration(
-                      color: Color(0xffF2EFFF),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Free',
-                          style: GoogleFonts.raleway(
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        Spacer(),
-                        Text(
-                          'Certificate',
-                          style: GoogleFonts.raleway(
-                            fontSize: 12,
-                            color: Color(0xff3A3845),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(
-                      top: 7,
-                      left: 15,
-                      bottom: 7,
-                    ),
-                    width: 115,
-                    height: 54,
-                    decoration: BoxDecoration(
-                      color: Color(0xffF2EFFF),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Type',
-                          style: GoogleFonts.raleway(
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        Spacer(),
-                        Text(
-                          'Multiple-choice',
-                          style: GoogleFonts.raleway(
-                            fontSize: 12,
-                            color: Color(0xff3A3845),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 26,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 38),
-              child: Text(
-                'How to do the quiz?',
-                style: GoogleFonts.raleway(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 64,
-                top: 15,
+              SizedBox(
+                height: 12,
               ),
-              child: Image.asset(
-                'assets/quiz_rules.png',
-                width: 171,
-                height: 140,
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 40,
+                  right: 32,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(
+                        top: 7,
+                        left: 15,
+                        bottom: 7,
+                      ),
+                      width: 90,
+                      height: 54,
+                      decoration: BoxDecoration(
+                        color: Color(0xffF2EFFF),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '10',
+                            style: GoogleFonts.raleway(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Questions',
+                            style: GoogleFonts.raleway(
+                              fontSize: 12,
+                              color: Color(0xff3A3845),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(
+                        top: 7,
+                        left: 15,
+                        bottom: 7,
+                      ),
+                      width: 90,
+                      height: 54,
+                      decoration: BoxDecoration(
+                        color: Color(0xffF2EFFF),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Free',
+                            style: GoogleFonts.raleway(
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Certificate',
+                            style: GoogleFonts.raleway(
+                              fontSize: 12,
+                              color: Color(0xff3A3845),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(
+                        top: 7,
+                        left: 15,
+                        bottom: 7,
+                      ),
+                      width: 115,
+                      height: 54,
+                      decoration: BoxDecoration(
+                        color: Color(0xffF2EFFF),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Type',
+                            style: GoogleFonts.raleway(
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Multiple-choice',
+                            style: GoogleFonts.raleway(
+                              fontSize: 12,
+                              color: Color(0xff3A3845),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+              SizedBox(
+                height: 26,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 38),
+                child: Text(
+                  'How to do the quiz?',
+                  style: GoogleFonts.raleway(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 64,
+                  top: 15,
+                ),
+                child: Image.asset(
+                  'assets/quiz_rules.png',
+                  width: 171,
+                  height: 140,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: Container(

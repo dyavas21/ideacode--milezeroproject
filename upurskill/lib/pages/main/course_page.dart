@@ -12,90 +12,95 @@ class CoursePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(
-        padding: EdgeInsets.only(
-          top: 59,
-          left: 44,
-          right: 43,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            top: 10,
+            left: 44,
+            right: 43,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 38,
+                  right: 38,
+                ),
+                child: title(),
+              ),
+              SizedBox(
+                height: 33,
+              ),
+              Text(
+                'On Progress (2)',
+                style: GoogleFonts.raleway(
+                  fontSize: 16,
+                  color: Color(0xff3A3845),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/public-speaking');
+                },
+                child: CourseCard(
+                  title: 'Public Speaking Class',
+                  number: '30/60',
+                  imageUrlProgress: 'assets/progress4.png',
+                  imageUrlCourse: 'assets/bg_course.png',
+                  isGrey: true,
+                  detail: 'Continue',
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              CourseCard(
+                title: 'Cooking Class',
+                number: '12/25',
+                imageUrlProgress: 'assets/progress3.png',
+                imageUrlCourse: 'assets/bg_course.png',
+                isGrey: true,
+                detail: 'Continue',
+              ),
+              SizedBox(
+                height: 26,
+              ),
+              Text(
+                'Completed (2)',
+                style: GoogleFonts.raleway(
+                  fontSize: 16,
+                  color: Color(0xff3A3845),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              CourseCard(
+                title: 'Public Speaking Class',
+                number: 'Completed',
+                imageUrlProgress: 'assets/progress5.png',
+                imageUrlCourse: 'assets/bg_course_complete.png',
+                isGrey: false,
+                detail: 'Detail',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              CourseCard(
+                title: 'Cooking Class',
+                number: 'Completed',
+                imageUrlProgress: 'assets/progress5.png',
+                imageUrlCourse: 'assets/bg_course_complete.png',
+                isGrey: false,
+                detail: 'Detail',
+              ),
+            ],
+          ),
         ),
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 38,
-              right: 38,
-            ),
-            child: title(),
-          ),
-          SizedBox(
-            height: 33,
-          ),
-          Text(
-            'On Progress (2)',
-            style: GoogleFonts.raleway(
-              fontSize: 16,
-              color: Color(0xff3A3845),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, '/public-speaking');
-            },
-            child: CourseCard(
-              title: 'Public Speaking Class',
-              number: '30/60',
-              imageUrlProgress: 'assets/progress4.png',
-              imageUrlCourse: 'assets/bg_course.png',
-              isGrey: true,
-              detail: 'Continue',
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          CourseCard(
-            title: 'Cooking Class',
-            number: '12/25',
-            imageUrlProgress: 'assets/progress3.png',
-            imageUrlCourse: 'assets/bg_course.png',
-            isGrey: true,
-            detail: 'Continue',
-          ),
-          SizedBox(
-            height: 26,
-          ),
-          Text(
-            'Completed (2)',
-            style: GoogleFonts.raleway(
-              fontSize: 16,
-              color: Color(0xff3A3845),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          CourseCard(
-            title: 'Public Speaking Class',
-            number: 'Completed',
-            imageUrlProgress: 'assets/progress5.png',
-            imageUrlCourse: 'assets/bg_course_complete.png',
-            isGrey: false,
-            detail: 'Detail',
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          CourseCard(
-            title: 'Cooking Class',
-            number: 'Completed',
-            imageUrlProgress: 'assets/progress5.png',
-            imageUrlCourse: 'assets/bg_course_complete.png',
-            isGrey: false,
-            detail: 'Detail',
-          ),
-        ],
       ),
       floatingActionButton: Container(
         height: 104,

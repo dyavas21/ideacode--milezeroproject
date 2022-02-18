@@ -10,116 +10,118 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(
-        padding: EdgeInsets.only(
-          left: 38,
-          top: 59,
-          right: 38,
-        ),
-        children: [
-          title(),
-          Container(
-            margin: EdgeInsets.only(
-              top: 41,
-            ),
-            child: Text(
-              'Your Progress',
-              style: GoogleFonts.raleway(
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
+      body: SafeArea(
+        child: ListView(
+          padding: EdgeInsets.only(
+            left: 38,
+            right: 38,
+            top: 18,
           ),
-          SizedBox(
-            height: 13,
-          ),
-          Container(
-            width: double.infinity,
-            height: 88,
-            decoration: BoxDecoration(
-              color: whiteGreyColor2,
-              borderRadius: BorderRadius.circular(
-                4,
+          children: [
+            title(),
+            Container(
+              margin: EdgeInsets.only(
+                top: 41,
               ),
-            ),
-            child: Stack(
-              children: [
-                Image.asset(
-                  'assets/bg_course.png',
-                  width: double.infinity,
-                  height: 88,
-                  fit: BoxFit.cover,
+              child: Text(
+                'Your Progress',
+                style: GoogleFonts.raleway(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
                 ),
-                Container(
-                  padding: EdgeInsets.only(
-                    top: 13,
-                    left: 20,
-                    right: 23,
-                    bottom: 13,
+              ),
+            ),
+            SizedBox(
+              height: 13,
+            ),
+            Container(
+              width: double.infinity,
+              height: 88,
+              decoration: BoxDecoration(
+                color: whiteGreyColor2,
+                borderRadius: BorderRadius.circular(
+                  4,
+                ),
+              ),
+              child: Stack(
+                children: [
+                  Image.asset(
+                    'assets/bg_course.png',
+                    width: double.infinity,
+                    height: 88,
+                    fit: BoxFit.cover,
                   ),
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/public-speaking');
-                    },
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Public Speaking Class',
-                          style: GoogleFonts.raleway(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xff3A3845),
+                  Container(
+                    padding: EdgeInsets.only(
+                      top: 13,
+                      left: 20,
+                      right: 23,
+                      bottom: 13,
+                    ),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/public-speaking');
+                      },
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Public Speaking Class',
+                            style: GoogleFonts.raleway(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xff3A3845),
+                            ),
                           ),
-                        ),
-                        Spacer(),
-                        Row(
-                          children: [
-                            Text(
-                              '30/60',
-                              style: GoogleFonts.raleway(
-                                fontSize: 12,
-                                color: Color(0xff3A3845),
+                          Spacer(),
+                          Row(
+                            children: [
+                              Text(
+                                '30/60',
+                                style: GoogleFonts.raleway(
+                                  fontSize: 12,
+                                  color: Color(0xff3A3845),
+                                ),
                               ),
-                            ),
-                            Spacer(),
-                            Text(
-                              'Continue',
-                              style: GoogleFonts.raleway(
-                                fontSize: 12,
-                                color: Color(0xff3A3845),
+                              Spacer(),
+                              Text(
+                                'Continue',
+                                style: GoogleFonts.raleway(
+                                  fontSize: 12,
+                                  color: Color(0xff3A3845),
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              width: 8,
-                            ),
-                            Image.asset(
-                              'assets/arrow_right.png',
-                              width: 13,
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Image.asset(
-                          'assets/progress.png',
-                        ),
-                      ],
+                              SizedBox(
+                                width: 8,
+                              ),
+                              Image.asset(
+                                'assets/arrow_right.png',
+                                width: 13,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                          Image.asset(
+                            'assets/progress.png',
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          SizedBox(
-            height: 26,
-          ),
-          title2(),
-          SizedBox(
-            height: 30,
-          ),
-        ],
+            SizedBox(
+              height: 26,
+            ),
+            title2(),
+            SizedBox(
+              height: 30,
+            ),
+          ],
+        ),
       ),
       floatingActionButton: Container(
         height: 104,
